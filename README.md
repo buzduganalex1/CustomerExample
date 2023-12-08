@@ -25,24 +25,26 @@ public class LoyaltyCard
 }
 ```
 
-# Data used for testing
-
-- Scenario: Creating a customer
+# Acceptance criteria
+```
+Scenario: Creating a customer
     Given a new customer with valid data
     When the CreateCustomer method is called
     Then the customer should be created
 
-- Scenario: Getting a customer based on an identifier
+Scenario: Getting a customer based on an identifier
     Given a customer with a known identifier
     When the GetCustomerById method is called with the identifier
     Then the customer with the specified identifier should be returned
 
-- Scenario: Creating a loyalty card for the customer
+Scenario: Creating a loyalty card for the customer
     Given an existing customer with valid data
     And a new loyalty card with valid data
     When the CreateLoyaltyCardForCustomer method is called
     Then the loyalty card should be associated with the customer
+```
 
+## Data used for testing
 ```C#
 var customer1 = new Customer
 {
